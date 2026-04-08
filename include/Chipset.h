@@ -190,7 +190,8 @@
 #pragma region Board Specific Bypasses
 
 #ifdef OPENSHOCK_FW_BOARD_WEMOSD1MINIESP32
-#define OPENSHOCK_BYPASSED_GPIO(pin) ((pin) == 15 || (pin) == 2)
+// Pewa says IO16 is okay for the target.
+#define OPENSHOCK_BYPASSED_GPIO(pin) ((pin) == 16 || (pin) == 15 || (pin) == 2)
 #endif
 #ifdef OPENSHOCK_FW_BOARD_WEMOSLOLINS2MINI
 #define OPENSHOCK_BYPASSED_GPIO(pin) ((pin) == 15)
